@@ -26,7 +26,9 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#motivations">Motivations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="#publications">Publications </a></li>
@@ -45,47 +47,135 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <h4 class="text-white-75 mb-5"> MSR4SBOM is a project that aims to deliver a framework that analyzes the content of software repositories and Software Bill of Materials (SBOMs) to provide context-sensitive recommendations.</h4>
-                        <a class="btn btn-primary btn-xl" href="#project">Find Out More</a>
+                        <a class="btn btn-primary btn-xl" href="#motivations">Find Out More</a>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Project-->
-        <section class="page-section bg-primary" id="project">
+        </header
+        
+        <!-- Motivations-->
+        
+<section class="page-section bg-primary" id="motivations">
+    <div class="container px-4 px-lg">
+                        <h1 class="mt-0 text-center text-white">MOTIVATIONS</h1>
+                        <hr class="divider divider-light" />
+        <div class="row gx-4 gx-lg-5">
+            <!-- JSON Excerpt Column -->
+            <div class="col-lg-7">                              
+                <pre class="bg-dark text-white p-3 rounded">
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
+  "version": 1,
+  "components": [
+    {
+      "type": "library",
+      "group": "org.example",
+      "name": "mylibrary",
+      "version": "1.0.0",
+      "cpe": "cpe:/a:example:mylibrary:1.0.0",
+      "purl": "pkg:maven/org.example/mylibrary@1.0.0",
+      "externalReferences": [
+        {
+          "type": "advisories",
+          "url": "https://example.org/security/advisories.json"
+        }
+      ]
+    }
+  ]
+}
+                </pre>
+                <p class="mb-4 text-white" style="text-align: justify;">
+                Example illustrating a component (specifically, a library) in an SBOM, according to the CycloneDX standard and the JSON format (<i><a class="text-white" href="https://cyclonedx.org/use-cases/#security-advisories">source</a></i>).</p>
+            </div>
+            <!-- Text Column -->
+            <div class="col-lg-5">
+                <p class="mb-4 text-white" style="text-align: justify;">
+                    A <b>Software Bill of Materials</b> (<b>SBOM</b>) describes, in a structured and machine-readable format, the open-source and proprietary components that constitute a software product, including their licenses, versions, vendors, vulnerabilities, and dependency relationships. SBOMs enable practitioners to gain visibility into the software supply chain and monitor any risks associated with software security, licensing, and more.
+                </p>
+
+                <p class="mb-4 text-white" style="text-align: justify;">
+                    Public administrations have been promoting SBOMs to have secure and accountable software products. For example, in 2021, the <b>United States Government</b>, per <b>President Biden’s <a class="text-white" href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/">Executive Order 14028</a></b>, laid down that any organization releasing software products to federal agencies must provide SBOMs for the released software products. Moreover, in 2022, the <b>European Commission</b> proposed a cybersecurity regulation (namely, <b><a class="text-white" href="https://www.enisa.europa.eu/publications/cyber-resilience-act-requirements-standards-mapping">Cyber Resilience Act</a></b>) outlining that software producers must document the vulnerabilities and components of their software products with SBOMs. As a result, SBOMs are expected to shortly become the de-facto standard for any organization that develops or maintains software products in both industrial and open-source contexts.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Challenges-->
+        <section class="page-section bg-secondary" id="challenges">
+            <div class="container px-4 px-lg">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg">
+                        <h1 class="text-white mt-0 text-center">CHALLENGES</h1>
+                        <hr class="divider divider-light" />
+                        <p class="text-white mb-3"> MSR4SBOM aims to exploit the long-lasting experience of the team in the diverse areas of Software Engineering to develop innovative solutions for creating and validating <b>enhanced SBOMs</b>. Specifically, MSR4SBOM will address the following challenges:</p>
+                    </div>
+                    <div class="row gx-4 gx-lg-12 justify-content-center">
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2"><i class="bi bi-layers fs-1 text-white"></i></div>
+                                <h3 class="h4 mb-2 text-white">Granularity problem</h3>
+                                <p class="text-white-75 mb-0" style="text-align: justify;">Dealing with software supply chains requires handling and integrating information and dependencies from components at different levels of granularity (e.g., libraries, or code snippets).</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2"><i class="bi bi-globe2 fs-1 text-white"></i></div>
+                                <h3 class="h4 mb-2 text-white">Dependencies complexity</h3>
+                                <p class="text-white-75 mb-0" style="text-align: justify;">The set of dependencies that SBOMs need to consider is complex and originates from different sources (e.g., software/hardware configurations, static/dynamic linking, services, or files).</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2"><i class="bi bi-wrench fs-1 text-white"></i></div>
+                                <h3 class="h4 mb-2 text-white">Lack of processes for SBOMs</h3>
+                                <p class="text-white-75 mb-0" style="text-align: justify;">The high heterogeneity of components requires customized processes to produce and consume SBOMs. Limited reuse capabilities of SBOMs could hinder managing licensing/security concerns. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--OBJECTIVES-->
+        <section class="page-section bg-primary" id="objectives">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h1 class="text-white mt-0">PROJECT</h1>
+                    <div class="col-lg text-center">
+                        <h1 class="text-white mt-0">OBJECTIVES</h1>
                         <hr class="divider divider-light" />
-                        <h2 class="text-white mb-4">MSR4SBOM will support software engineers with:</h2>
+                        <p class="text-white mb-3"> MSR4SBOM aims to address the following four objectives:</p>
                         
                         <div class="row gx-4 gx-lg-5">
                             <div class="col-lg-3 col-md-6 text-center">
                                 <div class="mt-5">
-                                    <div class="mb-2"><i class="bi bi-box fs-1 text-white"></i></div>
-                                    <h3 class="h4 mb-2 text-white">Dependencies</h3>
-                                    <h5 class="text-white-75 mb-0">Management of software supply chains</h5>
+                                    <div class="mb-2"><i class="bi bi-people fs-1 text-white"></i></div>
+                                    <h3 class="h4 mb-2 text-white">State-of-the-practice </h3>
+                                    <p class="text-white-75 mb-0" style="text-align: justify;">Understanding how extensively SBOMs are used by industrial and open-source practitioners, along with the associated challenges and needs.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 text-center">
                                 <div class="mt-5">
-                                    <div class="mb-2"><i class="bi bi-signpost-2 fs-1 text-white"></i></div>
-                                    <h3 class="h4 mb-2 text-white">Provenance</h3>
-                                    <h5 class="text-white-75 mb-0">Identification of provenance of software components and code snippets</h5>
+                                    <div class="mb-2"><i class="bi bi-tornado fs-1 text-white"></i></div>
+                                    <h3 class="h4 mb-2 text-white">Enhanced SBOMs</h3>
+                                    <p class="text-white-75 mb-0" style="text-align: justify;">Developing approaches and tools to create enhanced and fine-grained SBOMs, with detailed information on licensing/security concerns.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 text-center">
                                 <div class="mt-5">
-                                    <div class="mb-2"><i class="bi bi-file-break fs-1 text-white"></i></div>
-                                    <h3 class="h4 mb-2 text-white">Licensing</h3>
-                                    <h5 class="text-white-75 mb-0">Identification of licensing issues within software components</h5>
+                                    <div class="mb-2"><i class="bi bi-puzzle fs-1 text-white"></i></div>
+                                    <h3 class="h4 mb-2 text-white">SBOM infrastructures</h3>
+                                    <p class="text-white-75 mb-0" style="text-align: justify;">Developing recommender systems to notify developers when events related to the components of enhanced SBOMs occur.</p>
                                 </div>
                                 </div>
                             <div class="col-lg-3 col-md-6 text-center">
                                 <div class="mt-5">
-                                    <div class="mb-2"><i class="bi bi-shield fs-1 text-white"></i></div>
-                                    <h3 class="h4 mb-2 text-white">Security</h3>
-                                    <h5 class="text-white-75 mb-0">Recommendation for dependencies susceptible to security or vulnerability concerns</h5>
+                                    <div class="mb-2"><i class="bi bi-controller fs-1 text-white"></i></div>
+                                    <h3 class="h4 mb-2 text-white">Assessment</h3>
+                                    <p class="text-white-75 mb-0" style="text-align: justify;">Conducting in-field empirically evaluation of the proposed approaches and tools to promote their adoption by industrial and open-source practitioners.</p>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +196,7 @@
                 <br/>
                 <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-5 col-sm-6">
                         <a class="portfolio-box" title="UNISA" href="https://www.unisa.it/">
                             <img class="img-fluid" src="assets/img/unisa.png" alt="..." />
                             <div class="portfolio-box-caption">
@@ -120,34 +210,45 @@
                             <table class="table-borderless table">
                                 <tbody>
                                     <tr>
-                                    <td><a href="https://sites.google.com/view/prof-giuseppe-scanniello/home"><h5>Prof. Giuseppe Scanniello</h5></a> <em>(Principal Investigator)</em></td>
+                                        <td class="text-center" colspan="2">
+                                            <img src="assets/img/giuseppe.jpg" class="img-fluid rounded-circle">
+                                            <a href="https://sites.google.com/view/prof-giuseppe-scanniello/home"><h5>Prof. Giuseppe Scanniello</h5></a> <em>(Principal Investigator)</em></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://sites.google.com/view/simoneromano/home?authuser=0"><h6>Prof. Simone Romano</a></h6></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="https://docenti.unisa.it/004763/home"><h6>Prof. Rita Francese</a></h6></td>
+                                        <td class="text-center">
+                                            <img src="assets/img/simone.jpg" class="img-fluid rounded-circle">
+                                            <a href="https://sites.google.com/view/simoneromano/home?authuser=0">
+                                            <h6>Prof. Simone Romano</a></h6>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="assets/img/rita.jpg" class="img-fluid rounded-circle">
+                                            <a href="https://docenti.unisa.it/004763/home"><h6>Prof. Rita Francese</a></h6>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                    <td><a href="https://sabato-nocera.github.io/"><h6>Sabato Nocera</a></h6></td>
-                                    </tr>
-                                    <tr>
-                                    <td><a href="https://hauntlight.github.io/"><h6>Pietro Cassieri</a></h6></td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
+                                        <td class="text-center">
+                                            <img src="assets/img/sabato.png" class="img-fluid rounded-circle">
+                                            <a href="https://sabato-nocera.github.io/">
+                                            <h6>Sabato Nocera</a></h6>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="assets/img/pietro.png" class="img-fluid rounded-circle">
+                                            <a href="https://hauntlight.github.io/">
+                                            <h6>Pietro Cassieri</a></h6>
+                                        </td>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-1 col-sm-6">
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
                         <a class="portfolio-box" title="UNISANNIO" href="https://www.unisannio.it/it">
                             <img class="img-fluid" src="assets/img/unisannio.png" alt="..." />
                             <div class="portfolio-box-caption">
@@ -161,13 +262,20 @@
                             <table class="table-borderless table">
                                 <tbody>
                                     <tr>
-                                        <td><a href="https://mdipenta.github.io/"><h5>Prof. Massimiliano Di Penta</h5></a><em>(Co-Principal Investigator)</em></td>
+                                        <td class="text-center">
+                                            <img src="assets/img/max.png" class="img-fluid rounded-circle">
+                                            <a href="https://mdipenta.github.io/"><h5>Prof. Massimiliano Di Penta</h5></a><em>(Co-Principal Investigator)</em>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.unisannio.it/it/user/14832/contatti"><h6> Prof. Fiorella Zampetti</a></h6></td>
+                                        <td class="text-center">
+                                            <img src="assets/img/fiorella.jpg" class="img-fluid rounded-circle">
+                                            <a href="https://www.unisannio.it/it/user/14832/contatti">
+                                            <h6>Prof. Fiorella Zampetti</a></h6>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -176,14 +284,12 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.unisannio.it/it/users/daniele-bifolco"><h6> Daniele Bifolco</a></h6></td>
+                                        <td class="text-center">
+                                            <img src="assets/img/daniele.jpg" class="img-fluid rounded-circle">
+                                            <a href="https://www.unisannio.it/it/users/daniele-bifolco">
+                                            <h6> Daniele Bifolco</a></h6>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                    </tr>
-                                    <tr>
                                 </tbody>
                             </table>
                         </div>
