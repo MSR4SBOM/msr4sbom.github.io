@@ -60,8 +60,18 @@
                         <h1 class="mt-0 text-center text-white">MOTIVATIONS</h1>
                         <hr class="divider divider-light" />
         <div class="row gx-4 gx-lg-5">
+            <!-- Text Column -->
+            <div class="col-lg-6">
+                <p class="mb-4 text-white" style="text-align: justify;">
+                    A <b>Software Bill of Materials</b> (<b>SBOM</b>) describes, in a structured and machine-readable format, the open-source and proprietary components that constitute a software product, including their licenses, versions, vendors, vulnerabilities, and dependency relationships. SBOMs enable practitioners to gain visibility into the software supply chain and monitor any risks associated with software security, licensing, and more.
+                </p>
+
+                <p class="mb-4 text-white" style="text-align: justify;">
+                    Public administrations have been promoting SBOMs to have secure and accountable software products. For example, in 2021, the <b>United States Government</b>, per <b>President Biden’s <a class="text-white" href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/">Executive Order 14028</a></b>, laid down that any organization releasing software products to federal agencies must provide SBOMs for the released software products. Moreover, in 2022, the <b>European Commission</b> proposed a cybersecurity regulation (namely, <b><a class="text-white" href="https://www.enisa.europa.eu/publications/cyber-resilience-act-requirements-standards-mapping">Cyber Resilience Act</a></b>) outlining that software producers must document the vulnerabilities and components of their software products with SBOMs. As a result, SBOMs are expected to shortly become the de-facto standard for any organization that develops or maintains software products in both industrial and open-source contexts.
+                </p>
+            </div>
             <!-- JSON Excerpt Column -->
-            <div class="col-lg-7">                              
+            <div class="col-lg-6">                              
                 <pre class="bg-dark text-white p-3 rounded">
 {
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
@@ -89,16 +99,6 @@
                 </pre>
                 <p class="mb-4 text-white" style="text-align: justify;">
                 Example illustrating a component (specifically, a library) in an SBOM, according to the CycloneDX standard and the JSON format (<i><a class="text-white" href="https://cyclonedx.org/use-cases/#security-advisories">source</a></i>).</p>
-            </div>
-            <!-- Text Column -->
-            <div class="col-lg-5">
-                <p class="mb-4 text-white" style="text-align: justify;">
-                    A <b>Software Bill of Materials</b> (<b>SBOM</b>) describes, in a structured and machine-readable format, the open-source and proprietary components that constitute a software product, including their licenses, versions, vendors, vulnerabilities, and dependency relationships. SBOMs enable practitioners to gain visibility into the software supply chain and monitor any risks associated with software security, licensing, and more.
-                </p>
-
-                <p class="mb-4 text-white" style="text-align: justify;">
-                    Public administrations have been promoting SBOMs to have secure and accountable software products. For example, in 2021, the <b>United States Government</b>, per <b>President Biden’s <a class="text-white" href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/">Executive Order 14028</a></b>, laid down that any organization releasing software products to federal agencies must provide SBOMs for the released software products. Moreover, in 2022, the <b>European Commission</b> proposed a cybersecurity regulation (namely, <b><a class="text-white" href="https://www.enisa.europa.eu/publications/cyber-resilience-act-requirements-standards-mapping">Cyber Resilience Act</a></b>) outlining that software producers must document the vulnerabilities and components of their software products with SBOMs. As a result, SBOMs are expected to shortly become the de-facto standard for any organization that develops or maintains software products in both industrial and open-source contexts.
-                </p>
             </div>
         </div>
     </div>
